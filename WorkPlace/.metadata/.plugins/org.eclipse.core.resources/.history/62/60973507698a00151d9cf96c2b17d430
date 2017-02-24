@@ -1,0 +1,8 @@
+package exception;
+
+public class test {
+	AccountData Joe = new AccountData("Joe", 100);
+	
+	Joe.deposit(-100);
+
+}

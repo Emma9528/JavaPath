@@ -1,0 +1,17 @@
+
+public class FirstBlood {
+
+	public static void main(String[] args) {
+		
+		String first="Uda";
+		String second="city";
+		String and=first+second;
+		
+		
+		
+		
+		System.out.println(and);// TODO Auto-generated method stub
+		System.out.println("Night night~ Sweetie!");
+	}
+
+}

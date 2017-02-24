@@ -1,0 +1,16 @@
+
+public class FirstBlood {
+
+	public static void main(String[] args) {
+		
+		double original=2;
+		double root=Math.sqrt(original);
+		double rootsquared=root*root;
+		
+		
+		
+		System.out.println(rootsquared);// TODO Auto-generated method stub
+		System.out.println("Night night~ Sweetie!");
+	}
+
+}

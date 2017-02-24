@@ -1,0 +1,13 @@
+
+public class FirstBlood {
+
+	public static void main(String[] args) {
+		
+		double price= 4.35;
+		double pennies = 100*price;
+	   
+		System.out.println(pennies);// TODO Auto-generated method stub
+		System.out.println("Night night~ Sweetie!");
+	}
+
+}

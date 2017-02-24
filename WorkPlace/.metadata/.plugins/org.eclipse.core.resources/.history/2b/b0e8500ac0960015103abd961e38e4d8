@@ -1,0 +1,26 @@
+import javax.swing.*;
+import java.awt.*;
+public class buttons {
+	public static void main (String[] args){
+		buttons mybutton = new buttons();
+		mybutton.go();
+	}
+	public void go(){
+		JFrame frame = new JFrame();
+		JPanel panel= new JPanel();
+		panel.setBackground(Color.pink);
+		
+		JButton button1 = new JButton("shock me");
+		JButton button2 = new JButton("bliss");
+		JButton button3 = new JButton("huh?");
+		
+		panel.add(button1);
+		panel.add(button2);
+		panel.add(button3);
+		
+		frame.getContentPane().add(BorderLayout.EAST, panel);
+		frame.setSize(300, 300);
+		frame.setVisible(true);
+	}
+
+}

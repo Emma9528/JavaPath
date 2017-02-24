@@ -1,0 +1,19 @@
+import javax.sound.midi.*;
+public class Music2 implements ControllerEventListener{
+	public static void main(String[] args){
+		Music2 mini=new Music2();
+		mini.go();
+	}
+	public void go(){
+		try{
+		Sequencer sequencer = MidiSystem.getSequencer();
+		sequencer.open();
+		
+		Sequence seq = new Sequence(Sequence.PPQ,4);
+		Track track = seq.createTrack();
+		
+		sequencer.addControllerEventListener(this,MidiEvent event);
+		
+	}
+
+}

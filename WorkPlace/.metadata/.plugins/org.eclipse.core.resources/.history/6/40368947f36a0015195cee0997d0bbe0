@@ -1,0 +1,13 @@
+
+public class FirstBlood {
+
+	public static void main(String[] args) {
+		
+		String name ="Udacity";
+		
+		
+		System.out.println(name.substring(3,7));// TODO Auto-generated method stub
+		System.out.println("Night night~ Sweetie!");
+	}
+
+}

@@ -1,0 +1,119 @@
+import java.util.ArrayList;
+public class FirstBlood {
+	    ArrayList<String> list; 
+	    public ArrayListMethods(ArrayList<String> arrayList)
+	    {
+	        list = arrayList;
+	    }
+	    public boolean isSorted()
+	    {
+	        boolean sorted = true;
+
+	        for (int i=0;i<list.size()-1;i++)
+	        {
+	            if(list.get(i).compareTo(list.get(i+1))==1)
+	            {
+	                sorted=false;
+	            }
+
+	        return sorted;
+	    }
+	    }
+
+	    public void replaceWithLargerNeighbor()
+	    {
+
+	        for (int i=1;i<list.size()-1;i++)
+	        {
+	            if(list.get(i-1).compareTo(list.get(i+1))==1)
+	            {
+	                list.set(i,list.get(i-1));
+	            }
+	            else
+	            {
+	                list.set(i,list.get(i+1));
+	            }
+	        }
+	                         
+	    }
+	    public int countDuplicates()
+	    {
+	        int duplicates = 0;
+
+	        for (int i=0;i<list.size()-1;i++)
+	        {
+	            boolean found=false;
+	            for (int j=i+1;j<list.size();j++)
+	            {if(list.get(i).equals(list.get(j)))
+	            {found=true;}
+	            }
+	            if(found)
+	            {duplicates++;}
+	        }
+	        return duplicates;
+	    }
+	    public void xyzToFront()
+	    {
+	        int insertAt = 0;
+
+	        for(int i=0;i<list.size();i++)
+	        {
+	            if("z".equals(list.get(i).substring(0,1)))
+	            {
+	                list.add(0,list.get(i));
+	                list.remove(list.get(i));
+	            }
+	        }
+	        for(int i=0;i<list.size();i++)
+	        {
+	            if("y".equals(list.get(i).substring(0,1)))
+	            {
+	                list.add(0,list.get(i));
+	                list.remove(list.get(i));
+	            }
+	        }
+	        for(int i=0;i<list.size();i++)
+	        {
+	            if("x".equals(list.get(i).substring(0,1)))
+	            {
+	                list.add(0,list.get(i));
+	                list.remove(list.get(i));
+	            }
+	        }
+
+	    }
+	    public String toString()
+	    {
+	        return list.toString();
+	    }
+	    System.out.println("Night night~ Sweetie!");
+	}
+public class ShiftFirstToEnd
+{
+    public static void main(String[] args)
+    {
+        ArrayList<Picture> gallery = new ArrayList<Picture>();
+        gallery.add(new Picture("degas1.jpg"));
+        gallery.add(new Picture("gaugin1.jpg"));
+        gallery.add(new Picture("monet1.jpg"));
+        gallery.add(new Picture("monet2.jpg"));
+        gallery.add(new Picture("renoir1.jpg"));
+
+        int length=0;
+        gallery.add(gallery.remove(0));
+
+        for(Picture pic:gallery)
+        {
+            pic.translate(length+10,0);
+            length=length+pic.getWidth()+10;
+            pic.draw();
+            
+        }
+    }
+}
+
+
+	
+		  
+		
+	
